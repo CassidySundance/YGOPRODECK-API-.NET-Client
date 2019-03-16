@@ -10,6 +10,8 @@ ProjectSection(SolutionItems) = preProject
 	.gitignore = .gitignore
 EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YgoProDeck.Api.Core", "src\YgoProDeck.Api.Core\YgoProDeck.Api.Core.csproj", "{E4E4FF75-42AC-4E7F-B2BC-8B3F947CC96E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +22,13 @@ Global
 		{07DB57DF-5E77-4964-BCC7-C58FFE492A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07DB57DF-5E77-4964-BCC7-C58FFE492A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07DB57DF-5E77-4964-BCC7-C58FFE492A8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4E4FF75-42AC-4E7F-B2BC-8B3F947CC96E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4E4FF75-42AC-4E7F-B2BC-8B3F947CC96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4E4FF75-42AC-4E7F-B2BC-8B3F947CC96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4E4FF75-42AC-4E7F-B2BC-8B3F947CC96E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{07DB57DF-5E77-4964-BCC7-C58FFE492A8C} = {EFD10622-D4B5-4FED-BE5B-2676A739AA0D}
+		{E4E4FF75-42AC-4E7F-B2BC-8B3F947CC96E} = {EFD10622-D4B5-4FED-BE5B-2676A739AA0D}
 	EndGlobalSection
 EndGlobal
