@@ -2,6 +2,21 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <Authors>CassidySundance</Authors>
+        <Version>1.0.0-develop</Version>
+        <Description>.Net Client to consume YGOPRODECK API.</Description>
     </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\YgoProDeck.Api.Core\YgoProDeck.Api.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.2.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+      <PackageReference Include="Microsoft.Extensions.Http" Version="2.2.0" />
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    </ItemGroup>
 
 </Project>

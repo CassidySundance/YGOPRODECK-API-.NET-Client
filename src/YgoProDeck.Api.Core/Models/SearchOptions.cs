@@ -20,17 +20,17 @@ namespace YgoProDeck.Api.Core.Models
         /// <summary>
         /// Filter by ATK value.
         /// </summary>
-        public short Atk { get; set; }
+        public int? Atk { get; set; }
         
         /// <summary>
         /// Filter by DEF value.
         /// </summary>
-        public short Def { get; set; }
+        public int? Def { get; set; }
         
         /// <summary>
         /// Filter by card level/RANK.
         /// </summary>
-        public byte Level { get; set; }
+        public int? Level { get; set; }
         
         /// <summary>
         /// Filter by the card race, which is officially called type. This is also used for Spell/Trap cards.
