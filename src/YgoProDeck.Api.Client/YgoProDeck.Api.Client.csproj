@@ -5,6 +5,7 @@
         <Authors>CassidySundance</Authors>
         <Version>1.0.0-develop</Version>
         <Description>.Net Client to consume YGOPRODECK API.</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
     </PropertyGroup>
 
     <ItemGroup>
