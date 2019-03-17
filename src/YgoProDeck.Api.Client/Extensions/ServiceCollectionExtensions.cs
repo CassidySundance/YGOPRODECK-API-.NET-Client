@@ -1,5 +1,7 @@
+using System;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Polly;
 using YgoProDeck.Api.Client.Clients;
 using YgoProDeck.Api.Client.Clients.Implementations;
 
@@ -14,8 +16,23 @@ namespace YgoProDeck.Api.Client.Extensions
                 .AddSingleton<ICardInformationClient, CardInformationClient>()
                 .AddSingleton<IYuGiOhCardClient, YgoProDeckCardClient>();
 
-            services.AddHttpClient<CardImageClient>();
-            services.AddHttpClient<CardInformationClient>();
+            services
+                .AddHttpClient<CardImageClient>()
+                .AddTransientHttpErrorPolicy(builder => builder.WaitAndRetryAsync(new[]
+                {
+                    TimeSpan.FromSeconds(1),
+                    TimeSpan.FromSeconds(3),
+                    TimeSpan.FromSeconds(5) 
+                }));
+            
+            services
+                .AddHttpClient<CardInformationClient>()
+                .AddTransientHttpErrorPolicy(builder => builder.WaitAndRetryAsync(new[]
+                {
+                    TimeSpan.FromSeconds(1),
+                    TimeSpan.FromSeconds(3),
+                    TimeSpan.FromSeconds(5) 
+                }));
 
             return services;
         }
