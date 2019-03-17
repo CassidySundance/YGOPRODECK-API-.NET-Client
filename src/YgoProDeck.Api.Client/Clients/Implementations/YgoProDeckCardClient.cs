@@ -1,6 +1,6 @@
 using System.Threading;
 using System.Threading.Tasks;
-using YgoProDeck.Api.Core.Models;
+using YgoProDeck.Api.Client.Models;
 
 namespace YgoProDeck.Api.Client.Clients.Implementations
 {

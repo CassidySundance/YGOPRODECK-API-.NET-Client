@@ -1,4 +1,4 @@
-namespace YgoProDeck.Api.Core.Models
+namespace YgoProDeck.Api.Client.Models
 {
     public class SearchOptions
     {

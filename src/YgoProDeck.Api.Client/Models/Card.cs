@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace YgoProDeck.Api.Core.Models
+namespace YgoProDeck.Api.Client.Models
 {
     public class Card
     {
