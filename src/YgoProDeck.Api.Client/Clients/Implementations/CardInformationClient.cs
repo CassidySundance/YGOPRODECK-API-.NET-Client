@@ -10,7 +10,7 @@ using YgoProDeck.Api.Client.Models;
 
 namespace YgoProDeck.Api.Client.Clients.Implementations
 {
-    public class CardInformationClient : ICardInformationClient
+    internal class CardInformationClient : ICardInformationClient
     {
         private readonly HttpClient _httpClient;
 
