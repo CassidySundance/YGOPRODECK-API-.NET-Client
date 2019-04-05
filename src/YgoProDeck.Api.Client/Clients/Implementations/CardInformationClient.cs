@@ -23,7 +23,7 @@ namespace YgoProDeck.Api.Client.Clients.Implementations
         {
             var queriesDictionary = ConvertToDictionary(options);
             
-            var uriBuilder = new UriBuilder("https://db.ygoprodeck.com/api/v3/cardinfo.php");
+            var uriBuilder = new UriBuilder("https://db.ygoprodeck.com/api/v4/cardinfo.php");
             var query = HttpUtility.ParseQueryString(uriBuilder.Query);
 
             foreach (var queryPair in queriesDictionary)
@@ -43,10 +43,9 @@ namespace YgoProDeck.Api.Client.Clients.Implementations
         private IReadOnlyDictionary<string, string> ConvertToDictionary(SearchOptions options)
         {
             var dictionary = new Dictionary<string, string>();
+            var properties = options.GetType().GetProperties();
 
-            var stringProperties = options
-                .GetType()
-                .GetProperties()
+            var stringProperties = properties
                 .Where(propertyInfo => 
                     propertyInfo.GetType() == typeof(string) &&
                     !string.IsNullOrEmpty(propertyInfo.GetValue(options) as string));
@@ -56,9 +55,7 @@ namespace YgoProDeck.Api.Client.Clients.Implementations
                 dictionary.Add(nameof(stringProperty).ToLowerInvariant(), stringProperty.GetValue(options) as string);
             }
 
-            var intProperties = options
-                .GetType()
-                .GetProperties()
+            var intProperties = properties
                 .Where(propertyInfo =>
                     propertyInfo.GetType() == typeof(int?) &&
                     (propertyInfo.GetValue(options) as int?) != null);
