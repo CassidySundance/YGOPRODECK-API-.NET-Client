@@ -28,6 +28,32 @@ namespace YgoProDeck.Api.Client.Tests
             
             Assert.Equal(cards[0][0].Name, options.Name);
         }
+        
+        [Fact]
+        public async void GetCardInformationAsync2()
+        {
+            var options = new SearchOptions
+            {
+                Name = "Swords of Revealing Light"
+            };
+
+            var cards = await _informationClient.GetCardInformationAsync(options, CancellationToken.None);
+            
+            Assert.Equal(cards[0][0].Name, options.Name);
+        }
+        
+        [Fact]
+        public async void GetCardInformationAsync3()
+        {
+            var options = new SearchOptions
+            {
+                Name = "Shadow Spell"
+            };
+
+            var cards = await _informationClient.GetCardInformationAsync(options, CancellationToken.None);
+            
+            Assert.Equal(cards[0][0].Name, options.Name);
+        }
 
         [Fact]
         public async void GetRandomCardInformationAsync1()
