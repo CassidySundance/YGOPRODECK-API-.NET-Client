@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <Authors>CassidySundance</Authors>
-        <Version>1.0.0-develop</Version>
+        <Version>1.1.0-develop</Version>
         <Description>.Net Client to consume YGOPRODECK API.</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
     </PropertyGroup>
