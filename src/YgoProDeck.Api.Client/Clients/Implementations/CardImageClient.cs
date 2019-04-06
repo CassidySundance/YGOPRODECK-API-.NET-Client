@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace YgoProDeck.Api.Client.Clients.Implementations
 {
-    internal class CardImageClient : ICardImageClient
+    public class CardImageClient : ICardImageClient
     {
         private readonly HttpClient _httpClient;
 

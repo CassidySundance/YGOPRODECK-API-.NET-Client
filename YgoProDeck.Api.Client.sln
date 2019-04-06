@@ -10,6 +10,10 @@ ProjectSection(SolutionItems) = preProject
 	.gitignore = .gitignore
 EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{DA3208E8-B7FF-40B8-A561-A9E31197DAA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YgoProDeck.Api.Client.Tests", "test\YgoProDeck.Api.Client.Tests\YgoProDeck.Api.Client.Tests.csproj", "{8AF47B44-311E-4CAB-A59C-0BABDC2D490C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +24,13 @@ Global
 		{07DB57DF-5E77-4964-BCC7-C58FFE492A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07DB57DF-5E77-4964-BCC7-C58FFE492A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07DB57DF-5E77-4964-BCC7-C58FFE492A8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AF47B44-311E-4CAB-A59C-0BABDC2D490C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AF47B44-311E-4CAB-A59C-0BABDC2D490C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AF47B44-311E-4CAB-A59C-0BABDC2D490C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AF47B44-311E-4CAB-A59C-0BABDC2D490C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{07DB57DF-5E77-4964-BCC7-C58FFE492A8C} = {EFD10622-D4B5-4FED-BE5B-2676A739AA0D}
+		{8AF47B44-311E-4CAB-A59C-0BABDC2D490C} = {DA3208E8-B7FF-40B8-A561-A9E31197DAA5}
 	EndGlobalSection
 EndGlobal

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using YgoProDeck.Api.Client.Models;
@@ -15,9 +16,14 @@ namespace YgoProDeck.Api.Client.Clients.Implementations
             _imageClient = imageClient;
         }
         
-        public async Task<Card> GetCardInformationAsync(SearchOptions options, CancellationToken cancellationToken)
+        public async Task<List<List<Card>>> GetCardInformationAsync(SearchOptions options, CancellationToken cancellationToken)
         {
             return await _informationClient.GetCardInformationAsync(options, cancellationToken);
+        }
+
+        public async Task<Card> GetRandomCardInformationAsync(CancellationToken cancellationToken)
+        {
+            return await _informationClient.GetRandomCardInformationAsync(cancellationToken);
         }
 
         public async Task<byte[]> GetImageByUrlAsync(string url, CancellationToken cancellationToken)
