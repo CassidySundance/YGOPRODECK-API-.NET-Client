@@ -28,5 +28,13 @@ namespace YgoProDeck.Api.Client.Tests
             
             Assert.Equal(cards[0][0].Name, options.Name);
         }
+
+        [Fact]
+        public async void GetRandomCardInformationAsync1()
+        {
+            var card = await _informationClient.GetRandomCardInformationAsync(CancellationToken.None);
+            
+            Assert.Equal(typeof(Card), card.GetType());
+        }
     }
 }

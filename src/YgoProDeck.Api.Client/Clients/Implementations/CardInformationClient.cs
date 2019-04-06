@@ -44,8 +44,10 @@ namespace YgoProDeck.Api.Client.Clients.Implementations
         {
             var response = await _httpClient.GetAsync("https://db.ygoprodeck.com/api/v4/randomcard.php", cancellationToken);
             var responseBody = await response.Content.ReadAsStringAsync();
+            var deserializedResponse = JsonConvert.DeserializeObject<List<List<Card>>>(responseBody);
+            var card = deserializedResponse[0][0];
 
-            return JsonConvert.DeserializeObject<Card>(responseBody);
+            return card;
         }
 
         private IReadOnlyDictionary<string, string> ConvertToDictionary(SearchOptions options)
