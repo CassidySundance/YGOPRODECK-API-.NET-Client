@@ -43,7 +43,7 @@ namespace YgoProDeckTest
             _cardClient = cardClient;
         }
 
-        public async void Bar(CancellationToken cancellationToken)
+        public async Task Bar(CancellationToken cancellationToken)
         {
             // Getting card information
             var options = new SearchOptions
